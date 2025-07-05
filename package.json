@@ -1,0 +1,26 @@
+{
+  "name": "gajevids-schema",
+  "displayName": "Gajevids Schema",
+  "description": "Provides YAML schema validation and autocompletion for gajevids.yml files.",
+  "version": "0.0.1",
+  "publisher": "your-publisher-name",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Snippets",
+    "Programming Languages"
+  ],
+  "contributes": {
+    "yaml.schemas": [
+      {
+        "fileMatch": [
+          "gajevids.yml",
+          "*vids.yml"
+        ],
+        "url": "./schemas/gajevids.schema.json"
+      }
+    ]
+  },
+  "main": "./extension.js"
+}
