@@ -28,8 +28,8 @@
         "fileMatch": [
           "gajevids.yml",
           "gajevids.yaml",
-          "*.gajevids.yml",
-          "*.gajevids.yaml"
+          "*gajevids*.yml",
+          "*gajevids*.yaml"
         ],
         "url": "./gajevids.schema.json"
       }
