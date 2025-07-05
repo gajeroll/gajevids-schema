@@ -2,8 +2,8 @@
   "name": "gajevids-schema",
   "displayName": "Gajevids Schema",
   "description": "Provides YAML schema validation and autocompletion for gajevids.yml files.",
-  "version": "0.0.5",
-  "publisher": "YOUR-PUBLISHER-ID",
+  "version": "0.1.0",
+  "publisher": "gajeroll",
   "engines": {
     "vscode": "^1.100.0"
   },
