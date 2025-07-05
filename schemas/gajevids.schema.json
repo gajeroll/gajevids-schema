@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/gajeroll/gajevids/go/config/config",
+  "$ref": "#/$defs/Config",
+  "$defs": {
+    "Config": {
+      "properties": {
+        "output": {
+          "type": "string",
+          "description": "Output file path (e.g."
+        },
+        "fps": {
+          "type": "integer",
+          "maximum": 240,
+          "minimum": 1,
+          "description": "Frames per second (default 30)",
+          "default": 30
+        },
+        "resolution": {
+          "type": "string",
+          "pattern": "^\\d+x\\d+$",
+          "description": "Video resolution in WIDTHxHEIGHT format (default 1280x720)",
+          "default": "1280x720"
+        },
+        "videos": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object",
+          "description": "Map of video keys to file paths (e.g."
+        },
+        "transitions": {
+          "additionalProperties": {
+            "$ref": "#/$defs/TransitionDef"
+          },
+          "type": "object",
+          "description": "Transition definitions by name"
+        },
+        "default_transition": {
+          "type": "string",
+          "description": "Default transition name used when none is specified in timeline"
+        },
+        "timeline": {
+          "items": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object"
+          },
+          "type": "array",
+          "minItems": 1,
+          "description": "Sequence of video and transition entries (e.g."
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "output",
+        "videos",
+        "transitions",
+        "default_transition",
+        "timeline"
+      ],
+      "description": "Configuration schema for video timeline composition with transitions."
+    },
+    "TransitionDef": {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "fadeblack",
+            "dissolve",
+            "slideleft"
+          ],
+          "description": "FFmpeg transition type (e.g."
+        },
+        "duration": {
+          "type": "number",
+          "minimum": 0.1,
+          "description": "Transition duration in seconds (e.g."
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "type",
+        "duration"
+      ],
+      "description": "Definition of a video transition with type and duration."
+    }
+  }
+}
