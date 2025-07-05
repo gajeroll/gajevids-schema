@@ -1,15 +1,23 @@
 {
   "name": "gajevids-schema",
   "displayName": "Gajevids Schema",
-  "description": "Provides YAML schema validation and autocompletion for gajevids.yml files.",
+  "description": "Provides YAML schema validation and autocompletion for yml files.",
   "version": "0.1.0",
   "publisher": "gajeroll",
+  "license": "MIT",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gajeroll/gajevids-schema"
+  },
   "engines": {
     "vscode": "^1.100.0"
   },
   "categories": [
-    "Snippets",
-    "Programming Languages"
+    "Formatters",
+    "Linters",
+    "Programming Languages",
+    "Snippets"
   ],
   "extensionDependencies": [
     "redhat.vscode-yaml"
