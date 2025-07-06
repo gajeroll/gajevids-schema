@@ -7,7 +7,7 @@
       "properties": {
         "output": {
           "type": "string",
-          "description": "Output file path (e.g."
+          "description": "Output file path (e.g., output.mp4)"
         },
         "fps": {
           "type": "integer",
@@ -27,7 +27,7 @@
             "type": "string"
           },
           "type": "object",
-          "description": "Map of video keys to file paths (e.g."
+          "description": "Map of video keys to file paths (e.g., a: intro.mp4)"
         },
         "transitions": {
           "additionalProperties": {
@@ -49,7 +49,7 @@
           },
           "type": "array",
           "minItems": 1,
-          "description": "Sequence of video and transition entries (e.g."
+          "description": "Sequence of video and transition entries (e.g., - video: a, - transition: fade)"
         }
       },
       "additionalProperties": false,
@@ -72,12 +72,12 @@
             "dissolve",
             "slideleft"
           ],
-          "description": "FFmpeg transition type (e.g."
+          "description": "FFmpeg transition type (e.g., fadeblack, slideleft, dissolve)"
         },
         "duration": {
           "type": "number",
           "minimum": 0.1,
-          "description": "Transition duration in seconds (e.g."
+          "description": "Transition duration in seconds (e.g., 0.5)"
         }
       },
       "additionalProperties": false,
