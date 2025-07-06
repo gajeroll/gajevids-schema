@@ -6,9 +6,9 @@
     "ConfigV0": {
       "properties": {
         "version": {
-          "type": "string",
+          "type": "integer",
           "enum": [
-            "0"
+            0
           ],
           "description": "Config format version."
         },
@@ -24,10 +24,8 @@
           "default": 30
         },
         "resolution": {
-          "type": "string",
-          "pattern": "^\\d+x\\d+$",
-          "description": "Video resolution in WIDTHxHEIGHT format (default 1280x720)",
-          "default": "1280x720"
+          "$ref": "#/$defs/ResolutionV0",
+          "description": "Video resolution as width and height (default 1280x720)"
         },
         "videos": {
           "additionalProperties": {
@@ -69,6 +67,26 @@
         "timeline"
       ],
       "description": "Configuration schema for video timeline composition with transitions."
+    },
+    "ResolutionV0": {
+      "properties": {
+        "w": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Width in pixels (e.g., 1280)"
+        },
+        "h": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Height in pixels (e.g., 720)"
+        }
+      },
+      "additionalProperties": false,
+      "type": "object",
+      "required": [
+        "w",
+        "h"
+      ]
     },
     "TransitionDefV0": {
       "properties": {
