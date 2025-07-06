@@ -32,6 +32,20 @@
           "*gajevids*.yaml"
         ],
         "url": "./gajevids.schema.json"
+      },
+      {
+        "fileMatch": [
+          "gaje-vids-v0.yml",
+          "gaje-vids-v0.yaml"
+        ],
+        "url": "./schemas/gajevids-v0.schema.json"
+      },
+      {
+        "fileMatch": [
+          "gaje-vids-v1.yml",
+          "gaje-vids-v1.yaml"
+        ],
+        "url": "./schemas/gajevids-v1.schema.json"
       }
     ]
   }
