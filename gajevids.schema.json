@@ -5,6 +5,13 @@
   "$defs": {
     "Config": {
       "properties": {
+        "version": {
+          "type": "string",
+          "enum": [
+            "0"
+          ],
+          "description": "Config format version."
+        },
         "output": {
           "type": "string",
           "description": "Output file path (e.g., output.mp4)"
@@ -68,11 +75,62 @@
         "type": {
           "type": "string",
           "enum": [
+            "fade",
             "fadeblack",
+            "fadewhite",
+            "fadegrays",
             "dissolve",
-            "slideleft"
+            "pixelize",
+            "wipeleft",
+            "wiperight",
+            "wipeup",
+            "wipedown",
+            "wipetl",
+            "wipetr",
+            "wipebl",
+            "wipebr",
+            "slideleft",
+            "slideright",
+            "slideup",
+            "slidedown",
+            "circlecrop",
+            "rectcrop",
+            "circleopen",
+            "circleclose",
+            "vertopen",
+            "vertclose",
+            "horzopen",
+            "horzclose",
+            "smoothleft",
+            "smoothright",
+            "smoothup",
+            "smoothdown",
+            "diagtl",
+            "diagtr",
+            "diagbl",
+            "diagbr",
+            "hlslice",
+            "hrslice",
+            "vuslice",
+            "vdslice",
+            "radial",
+            "zoomin",
+            "squeezeh",
+            "squeezev",
+            "hlwind",
+            "hrwind",
+            "vuwind",
+            "vdwind",
+            "coverleft",
+            "coverright",
+            "coverup",
+            "coverdown",
+            "revealleft",
+            "revealright",
+            "revealup",
+            "revealdown"
           ],
-          "description": "FFmpeg transition type (e.g., fadeblack, slideleft, dissolve)"
+          "description": "FFmpeg xfade transition type"
         },
         "duration": {
           "type": "number",
