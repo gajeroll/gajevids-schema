@@ -14,14 +14,56 @@ Provides YAML validation and autocompletion for `gajevids.yml` used in Gajevids 
 
 ## Example
 
+<!-- start example_gajevids.yml -->
+
 ```yaml
-output: output.mp4
-fps: 30
+# gajevids configuration example (v0)
+
+# Schema version (default is 0 if omitted)
+version: 0
+
+# [Required]
+# Output video path
+output: "output.mp4"
+
+# Frame rate (defaults to 30)
+fps: 24
+
+# Resolution in WIDTHxHEIGHT (defaults to 1280x720)
+resolution: "1920x1080"
+
+# [Required]
+# Video source files
 videos:
-  a: intro.mp4
-  b: outro.mp4
+  intro: "intro.mp4"
+  main: "main_content.mp4"
+  outro: "outro.mp4"
+
+# [Required]
+# Transition definitions
+transitions:
+  fade:
+    type: fadeblack
+    duration: 0.5
+  slide:
+    type: slideleft
+    duration: 1.0
+  fancy:
+    type: zoomin
+    duration: 0.8
+
+# [Required]
+# Default transition when none specified
+default_transition: fade
+
+# [Required]
+# Timeline - sequence of videos and transitions
 timeline:
-  - video: a
-  - transition: fadeblack
-  - video: b
+  - video: intro
+  - transition: fancy
+  - video: main
+  - transition: slide
+  - video: outro
 ```
+
+<!-- end example_gajevids.yml -->
