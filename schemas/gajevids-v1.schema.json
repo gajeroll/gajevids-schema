@@ -1,9 +1,9 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/gajeroll/gajevids/go/config/config-v0",
-  "$ref": "#/$defs/ConfigV0",
+  "$id": "https://github.com/gajeroll/gajevids/go/config/config-v1",
+  "$ref": "#/$defs/ConfigV1",
   "$defs": {
-    "ConfigV0": {
+    "ConfigV1": {
       "properties": {
         "version": {
           "type": "string",
@@ -38,7 +38,7 @@
         },
         "transitions": {
           "additionalProperties": {
-            "$ref": "#/$defs/TransitionDefV0"
+            "$ref": "#/$defs/TransitionDefV1"
           },
           "type": "object",
           "description": "Transition definitions by name"
@@ -70,7 +70,7 @@
       ],
       "description": "Configuration schema for video timeline composition with transitions."
     },
-    "TransitionDefV0": {
+    "TransitionDefV1": {
       "properties": {
         "type": {
           "type": "string",
