@@ -1,16 +1,55 @@
 # Gajevids Schema
 
-Provides YAML validation and autocompletion for `gajevids.yml` used in Gajevids video composition.
+Provides YAML validation and autocompletion for `gajevids.yml`, the configuration file used in [Gajevids](https://github.com/gajeroll/homebrew-gajevids) — a command-line tool for automated FFmpeg video composition.
 
-## Usage
+## What is Gajevids?
 
-1. Open or create a `gajevids.yml` file.
-2. Start editing — schema validation and autocompletion will be available.
+Gajevids is a CLI tool that automatically composes multiple video files using YAML configuration. You define the input videos, transitions, and sequence using simple, human-readable files.
 
-## Features
+### Key Features
 
-- Full schema validation based on `gajevids.schema.json`
-- Autocompletion for fields like `videos`, `transitions`, and `timeline`
+- **Simple YAML Configuration** — Easy-to-read syntax for video editing
+- **Automatic Timeline Calculation** — Start times are automatically computed
+- **Rich Transitions** — Supports fade, dissolve, slide, and many more
+- **Cross-platform** — Works on macOS, Linux, and Windows (via WSL)
+
+## Getting Started with Gajevids
+
+Install the Gajevids CLI using [Homebrew](https://brew.sh):
+
+```bash
+# Add the Gajevids tap
+brew tap gajeroll/gajevids
+
+# Install the CLI
+brew install gajevids
+````
+
+Once installed, you can run:
+
+```bash
+# Generate an example config file
+gajevids --example
+
+# Compose videos based on a YAML config
+gajevids example_gajevids.yml
+
+# View help
+gajevids --help
+```
+
+## Features of This Extension
+
+This VSCode extension provides:
+
+* Full schema validation for `gajevids.yml`
+* Autocompletion for keys like `videos`, `transitions`, `timeline`
+* Hover tooltips and error highlighting based on `gajevids.schema.json`
+
+## How to Use
+
+1. Open or create a file named `gajevids.yml` (or `gajevids.yaml`) in VSCode.
+2. Start editing — validation and suggestions will appear automatically.
 
 ## Example
 
