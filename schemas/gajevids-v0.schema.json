@@ -1,9 +1,9 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/gajeroll/gajevids/go/config/config-v0",
-  "$ref": "#/$defs/ConfigV0",
+  "$id": "https://github.com/gajeroll/gajevids/go/internal/v0/config",
+  "$ref": "#/$defs/Config",
   "$defs": {
-    "ConfigV0": {
+    "Config": {
       "properties": {
         "version": {
           "type": "integer",
@@ -24,7 +24,7 @@
           "default": 30
         },
         "resolution": {
-          "$ref": "#/$defs/ResolutionV0",
+          "$ref": "#/$defs/Resolution",
           "description": "Video resolution as width and height (default 1280x720)"
         },
         "videos": {
@@ -36,7 +36,7 @@
         },
         "transitions": {
           "additionalProperties": {
-            "$ref": "#/$defs/TransitionDefV0"
+            "$ref": "#/$defs/TransitionDef"
           },
           "type": "object",
           "description": "Transition definitions by name"
@@ -68,7 +68,7 @@
       ],
       "description": "Configuration schema for video timeline composition with transitions."
     },
-    "ResolutionV0": {
+    "Resolution": {
       "properties": {
         "w": {
           "type": "integer",
@@ -88,7 +88,7 @@
         "h"
       ]
     },
-    "TransitionDefV0": {
+    "TransitionDef": {
       "properties": {
         "type": {
           "type": "string",
