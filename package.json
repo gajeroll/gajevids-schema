@@ -2,7 +2,7 @@
   "name": "gajevids-schema",
   "displayName": "Gajevids Schema",
   "description": "Provides YAML schema validation and autocompletion for yml files.",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "publisher": "gajeroll",
   "license": "MIT",
   "icon": "icon.png",
