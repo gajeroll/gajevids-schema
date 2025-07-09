@@ -55,6 +55,29 @@
           "type": "array",
           "minItems": 1,
           "description": "Sequence of video and transition entries (e.g., - video: a, - transition: fade)"
+        },
+        "pix_fmt": {
+          "type": "string",
+          "enum": [
+            "yuv420p",
+            "yuv422p",
+            "yuv444p",
+            "nv12",
+            "gray",
+            "rgb24",
+            "rgba",
+            "monow",
+            "monob"
+          ],
+          "description": "Pixel format used for output video (e.g., yuv420p)",
+          "default": "yuv420p"
+        },
+        "ffmpeg_args": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "type": "object",
+          "description": "Additional FFmpeg arguments as key-value pairs"
         }
       },
       "additionalProperties": false,
